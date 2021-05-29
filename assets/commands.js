@@ -15,7 +15,7 @@ commands.clear = function(words) {
 
 commands.blog = function(words) {
     document.location.hash = "";
-    document.location.href = "/blog/";
+    document.location.href = "/blog.html";
 };
 
 commands.findme = (words) => {
