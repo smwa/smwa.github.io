@@ -6,7 +6,10 @@ commands.help = (words) => "<p>Feel free to type in one of the following command
 
 commands.whoami = (words) => "<h1>Michael Smith</h1><p>Oklahoma City, Oklahoma, United States</p>";
 
-commands.portfolio = (words) => biographyText;
+commands.portfolio = function(words) {
+    document.location.hash = "";
+    document.location.href = "/portfolio.html";
+};
 
 commands.clear = function(words) {
     document.getElementsByClassName("console")[0].innerHTML = '';
