@@ -3,5 +3,5 @@ layout: default
 title: Blog
 ---
 <small><nav><a href="/">Go Back</a></nav></small><h1>Latest Posts</h1>
-<ul>{% for post in site.posts %}<li><h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>{{ post.excerpt | strip_html | truncatewords:75 }}</li>
+<ul>{% for post in site.posts %}<li><h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><small> - {{ post.date | date: "%B %-d, %Y" }}</small></h2>{{ post.excerpt | strip_html | truncatewords:75 }}</li>
 {% endfor %}</ul>

@@ -15,9 +15,9 @@ var writer = initializeConsole(document.body, function(line) {
         }
     }
 });
-writer("whoami", true);
 
 var hashLocation = window.location.hash.replace('#', '').replace(/\-/, ' ')
+
 setTimeout(() => {
     writer(hashLocation, true)
 }, 200);
@@ -25,3 +25,7 @@ setTimeout(() => {
 setTimeout(() => {
     writer("help", true);
 }, 1200);
+
+if (hashLocation != "whoami") {
+    writer("whoami", true);
+}

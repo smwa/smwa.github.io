@@ -3,7 +3,7 @@
 function initializeConsole(container, onCarriageReturn) {
     container.classList.add('console-background');
 
-    var consoleElement = document.createElement('pre');
+    var consoleElement = document.createElement('div');
     consoleElement.classList.add('console');
     container.appendChild(consoleElement);
 
@@ -39,7 +39,7 @@ function initializeConsole(container, onCarriageReturn) {
         else if (document.body.offsetHeight < offsetHeight) {
             offsetHeight = document.body.offsetHeight;
         }
-        for (var i = 0; i < 3; i++) {
+        for (var i = 0; i < 4; i++) {
             writeNextCharacter();
         }
     }, 15);

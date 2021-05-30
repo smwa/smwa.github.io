@@ -5,3 +5,12 @@
 .contact img {
     height: 1em;
 }
+
+body {
+    margin: 0;
+    padding-left: 4vw;
+    padding-right: 4vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    min-height: 96vh;
+}
