@@ -26,7 +26,7 @@
 }
 
 .console {
-    text-shadow: 0 0 2px #C8C8C8;
+    text-shadow: 0 0 3px #C8C8C8;
     font: 1.3rem Inconsolata, monospace;
     color: #dddddd;
     word-wrap: break-word;
