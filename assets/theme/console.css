@@ -9,14 +9,13 @@
 }
 
 .console-background {
-    background-color: #080808;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 
     background-image: radial-gradient(
-        rgba(0, 150, 0, 0.25), black 120%
+        rgb(6, 44, 6), black 120%
     );
 }
 
