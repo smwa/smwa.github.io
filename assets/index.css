@@ -12,5 +12,9 @@ body {
     padding-right: 4vw;
     padding-top: 2vh;
     padding-bottom: 2vh;
-    min-height: 96vh;
+    min-height: 100vh;
+}
+
+html {
+    background-color: #000000;
 }
