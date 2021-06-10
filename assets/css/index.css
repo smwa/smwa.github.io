@@ -18,3 +18,8 @@ body {
 html {
     background-color: #000000;
 }
+
+.post img {
+    max-width: 100%;
+    max-height: 80vh;
+}
