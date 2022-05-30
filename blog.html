@@ -1,7 +1,12 @@
 ---
-layout: default
+layout: default_child
 title: Blog
 ---
-<small><nav><a href="/">Go Back</a></nav></small><h1>Latest Posts</h1>
-{% for post in site.posts %}<h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2><h3>{{ post.date | date: "%B %-d, %Y" }}</h3><p>{{ post.excerpt | strip_html | truncatewords:25 }}</p>
+<h1>Latest Posts</h1>
+{% for post in site.posts %}
+    <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+    
+    <h3>{{ post.date | date: "%B %-d, %Y" }}</h3>
+    
+    <p>{{ post.excerpt | strip_html | truncatewords:25 }}</p>
 {% endfor %}
