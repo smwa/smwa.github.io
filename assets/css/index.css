@@ -16,7 +16,7 @@
     background-size: cover;
 
     background-image: radial-gradient(
-        rgb(6, 44, 6), black 120%
+        #062C06, #000000 120%
     );
 }
 
@@ -49,6 +49,12 @@
     animation: blinker 1.4s linear infinite;
     margin-left: -0.15em;
     font-weight: bold;
+}
+
+.console ::selection {
+    background-color: #dddddd;
+    color: #000000;
+    text-shadow: 0 0 3px #373737;
 }
 
 @keyframes blinker {
