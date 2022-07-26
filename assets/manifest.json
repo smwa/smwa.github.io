@@ -1,0 +1,22 @@
+{
+  "short_name": "Michael Smith",
+  "name": "Michael Smith - Home Page",
+  "icons": [
+    {
+      "src": "./icons/favicon.png",
+      "type": "image/png",
+      "sizes": "1280x1280"
+    },
+    {
+      "src": "./icons/apple-touch-icon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#000000",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#062C06",
+  "description": "A home page to get up-to-date information on Michael Smith, the software engineer from Oklahoma."
+}
