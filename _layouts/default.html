@@ -79,7 +79,8 @@
           return;
         }
         const timestamp = performance.now();
-        const time_passed = (timestamp - last_degradation_timestamp) / 1000;
+        let time_passed = (timestamp - last_degradation_timestamp) / 1000;
+        time_passed = Math.min(0.05, time_passed);
         last_motion_timestamp = timestamp;
         
         if (event.rotationRate.alpha !== null) {
