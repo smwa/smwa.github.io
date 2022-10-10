@@ -26,9 +26,9 @@
 }
 
 .console {
-    text-shadow: 0 0 3px #888888;
+    text-shadow: 0 0 3px #aaaaaa;
     font: 1.3rem Inconsolata, monospace;
-    color: #aeaeae;
+    color: #bbbbbb;
     word-wrap: break-word;
     /* word-break: break-all; */
     letter-spacing: 0.03em;
@@ -38,39 +38,39 @@
 .console h1 {
   font-weight: 500;
   color: #ffffff;
-  text-shadow: 0 0 3px #ccc;
+  text-shadow: 0 0 3px #eee;
   text-decoration: underline;
 }
 
 .console h2 {
   font-weight: 500;
   color: #ffffff;
-  text-shadow: 0 0 3px #ccc;
+  text-shadow: 0 0 3px #eee;
   text-decoration: underline;
 }
 
 .console h3 {
   font-weight: 500;
   color: #eeeeee;
-  text-shadow: 0 0 3px #bbb;
+  text-shadow: 0 0 3px #ccc;
 }
 
 .console h4 {
   font-weight: 500;
   color: #eeeeee;
-  text-shadow: 0 0 3px #bbb;
+  text-shadow: 0 0 3px #ccc;
 }
 
 .console h5 {
   font-weight: 500;
   color: #dddddd;
-  text-shadow: 0 0 3px #aaa;
+  text-shadow: 0 0 3px #bbb;
 }
 
 .console h6 {
   font-weight: 500;
   color: #dddddd;
-  text-shadow: 0 0 3px #aaa;
+  text-shadow: 0 0 3px #bbb;
 }
 
 .console-input {
