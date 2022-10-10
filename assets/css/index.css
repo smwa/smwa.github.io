@@ -20,6 +20,12 @@
     );
 }
 
+.console code {
+  white-space: pre;
+  font-style: italic;
+  color: #eeeeee;
+}
+
 .console * {
     transition-duration: 100ms;
     transition-property: color, text-shadow;
