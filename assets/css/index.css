@@ -26,13 +26,51 @@
 }
 
 .console {
-    text-shadow: 0 0 3px #C8C8C8;
+    text-shadow: 0 0 3px #888888;
     font: 1.3rem Inconsolata, monospace;
-    color: #dddddd;
+    color: #aeaeae;
     word-wrap: break-word;
-    word-break: break-all;
+    /* word-break: break-all; */
     letter-spacing: 0.03em;
     line-height: 1.45em;
+}
+
+.console h1 {
+  font-weight: 500;
+  color: #ffffff;
+  text-shadow: 0 0 3px #ccc;
+  text-decoration: underline;
+}
+
+.console h2 {
+  font-weight: 500;
+  color: #ffffff;
+  text-shadow: 0 0 3px #ccc;
+  text-decoration: underline;
+}
+
+.console h3 {
+  font-weight: 500;
+  color: #eeeeee;
+  text-shadow: 0 0 3px #bbb;
+}
+
+.console h4 {
+  font-weight: 500;
+  color: #eeeeee;
+  text-shadow: 0 0 3px #bbb;
+}
+
+.console h5 {
+  font-weight: 500;
+  color: #dddddd;
+  text-shadow: 0 0 3px #aaa;
+}
+
+.console h6 {
+  font-weight: 500;
+  color: #dddddd;
+  text-shadow: 0 0 3px #aaa;
 }
 
 .console-input {
@@ -57,6 +95,15 @@
     text-shadow: 0 0 3px #373737;
 }
 
+.console ul {
+  list-style-type: none;
+}
+
+.console ul > li::before {
+  content: '>';
+  padding-right: 0.5rem;
+}
+
 @keyframes blinker {
     0% {
         visibility: hidden;
@@ -71,6 +118,10 @@
 
 .contact {
     padding-bottom: 15px;
+}
+
+.contact .small {
+  font-size: 0.85rem;
 }
 
 .contact img {
