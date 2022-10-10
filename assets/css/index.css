@@ -123,15 +123,22 @@
 }
 
 .contact {
-    padding-bottom: 15px;
+    padding-bottom: 1.8rem;
+    display: flex;
+    align-items: center;
+    word-break: break-all;
 }
 
-.contact .small {
-  font-size: 0.85rem;
+.contact small {
+  font-size: 1.7rem;
+  padding-right: 0.6rem;
+  margin-left: -0.2rem;
 }
 
-.contact img {
-    height: 1em;
+.contact :first-child:not(small) {
+    height: auto;
+    width: 1.4em;
+    padding-right: 0.8rem;
 }
 
 body {
