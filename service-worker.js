@@ -32,6 +32,7 @@ const PRECACHE_URLS = [
     '.{{ page.url }}',
   {% endfor %}
   './feed.xml',
+  './sitemap.xml',
   './index.html'
 ];
 
