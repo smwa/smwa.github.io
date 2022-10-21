@@ -12,7 +12,7 @@ layout: null
         <lastmod>{{ post.lastmod | date_to_xmlschema }}</lastmod>
       {% endif %}
       <changefreq>monthly</changefreq>
-      <priority>1.0</priority>
+      <priority>0.5</priority>
     </url>
   {% endfor %}
   {% for page in site.pages %}
@@ -21,7 +21,7 @@ layout: null
         <loc>{{ site.url }}{{ page.url }}</loc>
         <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>2.0</priority>
+        <priority>1.0</priority>
        </url>
     {% endif %}
   {% endfor %}
@@ -30,7 +30,7 @@ layout: null
       <loc>{{ site.url }}{{ page.url }}</loc>
       <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
       <changefreq>monthly</changefreq>
-      <priority>2.0</priority>
+      <priority>1.0</priority>
       </url>
   {% endfor %}
 </urlset>
