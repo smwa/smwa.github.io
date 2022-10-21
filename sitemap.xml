@@ -19,7 +19,7 @@ layout: null
     {% if page.sitemap != null and page.sitemap != empty %}
       <url>
         <loc>{{ site.url }}{{ page.url }}</loc>
-        <lastmod>{{ site.time | replace_first:' ','T' | replace_first:' ','' }}</lastmod>
+        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>2.0</priority>
        </url>
@@ -28,7 +28,7 @@ layout: null
   {% for page in site.html_pages %}
     <url>
       <loc>{{ site.url }}{{ page.url }}</loc>
-      <lastmod>{{ site.time | replace_first:' ','T' | replace_first:' ','' }}</lastmod>
+      <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
       <changefreq>monthly</changefreq>
       <priority>2.0</priority>
       </url>
