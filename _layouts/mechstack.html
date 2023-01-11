@@ -50,9 +50,11 @@
     <script src="{{ 'assets/mechstack/feather.min.js' | relative_url }}"></script>
     <script>
       feather.replace();
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register("{{ 'service-worker.js' | relative_url }}");
-      }
+      {% if jekyll.environment != "development" %}
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register("{{ 'service-worker.js' | relative_url }}");
+        }
+      {% endif %}
     </script>
   </body>
 </html>
