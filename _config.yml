@@ -48,6 +48,7 @@ plugins:
   - jekyll-feed
   - jekyll-target-blank
   - jekyll-webp
+  - jekyll-regex-replace
   - jekyll-remove-file-extension
 
 exclude:
