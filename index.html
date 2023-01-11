@@ -1,13 +1,32 @@
 ---
-title: Home
-layout: default
+permalink: /
+layout: mechstack
 ---
-<h1>Michael Smith</h1>
-<h2><small>Oklahoma, United States</small></h2>
 
-<ul>
-  <li><a href="{{ site.baseurl }}/contact_me.html">Contact Me</a></li>
-  <li><a href="{{ site.baseurl }}/resume.html">Résumé</a></li>
-  <li><a href="{{ site.baseurl }}/blog.html">Blog</a></li>
-  <li><a href="https://mechstack.dev/">Mechstack</a></li>
-</ul>
+<div>
+    <div>
+        {% include picture.html url='assets/mechstack/headshot.png' title='Michael Smith' %}
+    </div>
+    <div>
+        <a href="mailto:michael@mechstack.dev" class="center-content">
+            <i data-feather="mail"></i>
+            michael@mechstack.dev
+        </a>
+        <a href="tel:+14059290705" class="center-content">
+            <i data-feather="phone"></i>
+            +1-405-929-0705
+        </a>
+        <a href="https://www.linkedin.com/in/michael-smith-ok" class="center-content">
+            <i data-feather="globe"></i>
+            LinkedIn: michael-smith-ok
+        </a>
+        <a href="https://github.com/smwa/" class="center-content">
+            <i data-feather="github"></i>
+            Github: smwa
+        </a>
+        <a href="{{ site.baseurl }}/Michael/" class="center-content">
+            <i data-feather="globe"></i>
+            Michael Smith
+        </a>
+    </div>
+</div>

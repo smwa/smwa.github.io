@@ -1,0 +1,7 @@
+{% capture url %}{{ include.url | relative_url }}{% endcapture %}
+<img
+  src="{{ url }}"
+  class="{{ include.class | default: '' }}"
+  srcset="{{ url | remove_file_extension | append: '.webp' }}, {{ url }}"
+  alt="{{ include.title }}"
+/>

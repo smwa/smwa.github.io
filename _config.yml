@@ -23,17 +23,40 @@ email: michael.smith.ok@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   This is the personal blog of Michael Smith.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://michael.mechstack.dev" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://mechstack.dev" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 github_username: smwa
+
+webp:
+  enabled: true
+  quality: 75
+  img_dir: ["/assets/"]
+  nested: true
+  formats: [".jpeg", ".jpg", ".png", ".tiff", ".gif"]
+  gifs: [".gif"]
+  regenerate: false
+  # List of files or directories to exclude
+  # e.g. custom or hand generated webp conversion files
+  exclude: []
+  # append '.webp' to filename after original extension rather than replacing it.
+  # Default transforms `image.png` to `image.webp`, while changing to true transforms `image.png` to `image.png.webp`
+  append_ext: false
 
 # Build settings
 # theme: minima
 plugins:
   - jekyll-feed
   - jekyll-target-blank
+  - jekyll-webp
+  - jekyll-remove-file-extension
 
 exclude:
+  - .bundle/
+  - .jekyll-cache/
+  - vendor/
+  - .gitignore
+  - Gemfile
+  - Gemfile.lock
   - run.sh
 
 defaults:

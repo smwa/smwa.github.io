@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ 'assets/mechstack/skeleton/skeleton.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ 'assets/mechstack/custom.css' | relative_url }}">
+    <link rel="manifest" href="{{ 'manifest.json' | relative_url }}">
+
+    <title>{{ site.data.site.title }}</title>
+    <meta name="description" content="{{ site.data.site.description }}">
+    <meta name="theme-color" content="{{ site.data.site.color }}">
+
+    <!-- Open Graph Meta -->
+    <meta content="{{ site.data.site.name }}" property="og:site_name">
+    <meta content="{{ site.data.site.title }}" property="og:title">
+    <meta content="website" property="og:type">
+    <meta content="{{ site.data.site.description }}" property="og:description">
+    <meta content="{{ '.' | absolute_url }}" property="og:url">
+    <meta content="{{ site.data.site.sharing_image | absolute_url }}" property="og:image">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="{{ site.data.site.twitter }}">
+    <meta name="twitter:creator" content="{{ site.data.site.twitter }}">
+    <meta name="twitter:title" content="{{ site.data.site.name }}">
+    <meta name="twitter:url" content="{{ '.' | absolute_url }}">
+    <meta name="twitter:description" content="{{ site.data.site.description }}">
+    <meta name="twitter:image:src" content="{{ site.data.site.sharing_image | absolute_url }}">
+
+    <link rel="icon" type="image/png" href="{{ site.data.site.logo | relative_url }}">
+    <link rel="mask-icon" href="{{ site.data.site.apple_mask_icon | relative_url }}" color="{{ site.data.site.color }}">
+    <link rel="apple-touch-icon" href="{{ site.data.site.logo | relative_url }}">
+
+  </head>
+  <body>
+    <div class="navigation-bar" role="heading">
+      <a href="{{ '/' | relative_url }}">
+        {% include picture.html url=site.data.site.logo title='Site logo' %}
+      </a>
+      {% for navlink in site.data.navigation %}
+          <a href="{{ navlink.url }}">{{ navlink.text }}</a>
+      {% endfor %}
+      <img src="{{ site.data.site.logo | relative_url }}" style="width: 1em; opacity: 0%" title="{{ 'Site generated at ' | append: site.time }}" aria-hidden="true"> </div>
+    </div>
+    <div class="sections" role="main">
+      {{ content }}
+    </div>
+    <script src="{{ 'assets/mechstack/feather.min.js' | relative_url }}"></script>
+    <script>
+      feather.replace();
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register("{{ 'service-worker.js' | relative_url }}");
+      }
+    </script>
+  </body>
+</html>
