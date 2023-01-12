@@ -11,6 +11,11 @@ h1, h2, h3, h4, h5, h6 {
     border-color: #00FFBB;
 }
 
+.padding {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
 .sections a {
     color: black;
     text-decoration: none;
