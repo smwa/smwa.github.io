@@ -1,6 +1,6 @@
 html {
-    background-color: #FFFFFF;
-    color: #222222;
+  background-color: #FFFFFF;
+  color: #222222;
 }
 
 h1 {
@@ -10,12 +10,12 @@ h1 {
 }
 
 h2, h3, h4, h5, h6 {
-  opacity: 0.8;
+  opacity: 0.75;
   color: #000000;
 }
 
 * {
-    border-color: #00FFBB;
+  border-color: #00FFBB;
 }
 
 .navigation-bar > :first-child, .navigation-bar > :first-child > :first-child {
@@ -29,82 +29,49 @@ h2, h3, h4, h5, h6 {
 }
 
 .sections a {
-    color: black;
-    text-decoration: none;
-    border: 1px solid black;
-    border-radius: 5px;
-    padding: 8px;
-    margin: 8px;
+  color: black;
+  text-decoration: none;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 8px;
+  margin: 8px;
 }
 
 .navigation-bar, .navigation-bar :link, .navigation-bar :visited {
-    color: #222222;
-}
-
-.sections {
-
-}
-
-/* Section */
-.sections > * {
-
-}
-
-/* Block */
-.sections > * > * {
-
+  color: #222222;
 }
 
 svg {
-    stroke: #000000;
+  stroke: #000000;
 }
 
 @media (prefers-color-scheme: light) {
-    .navigation-bar img {
-        background-color: #222222;
-        border-radius: 100%;
-    }
+  .navigation-bar img {
+  background-color: #222222;
+  border-radius: 100%;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
-    html {
-        background-color: #222222;
-        color: #ffffff;
-    }
+  html {
+  background-color: #222222;
+  color: #ffffff;
+  }
 
-    h1, h2, h3, h4, h5, h6 {
-        color: #00FFBB;
-    }
+  h1, h2, h3, h4, h5, h6 {
+  color: #00FFBB;
+  }
 
-    h2, h3, h4, h5, h6 {
-        color: #00FFBB;
-        opacity: 0.7;
-    }
+  .sections a {
+  color: #00FFBB;
+  border-color: #00FFBB;
+  }
 
-    .sections a {
-        color: #00FFBB;
-        border-color: #00FFBB;
-    }
-
-    svg {
-        stroke: #00FFBB;
-    }
-    
-    .navigation-bar, .navigation-bar :link, .navigation-bar :visited {
-        color: #b5b5ff;
-    }
-    
-    .sections {
-    
-    }
-    
-    /* Section */
-    .sections > * {
-    
-    }
-    
-    /* Block */
-    .sections > * > * {
-        
-    }
+  svg {
+  stroke: #00FFBB;
+  }
+  
+  .navigation-bar, .navigation-bar :link, .navigation-bar :visited {
+  color: #b5b5ff;
+  }
 }
