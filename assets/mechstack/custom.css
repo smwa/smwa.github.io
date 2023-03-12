@@ -3,12 +3,24 @@ html {
     color: #222222;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    color: #000000;
+h1 {
+  color: #000000;
+  border-bottom: 2px solid #00FFBB;
+  padding: 0 2rem 0.4rem 2rem;
+}
+
+h2, h3, h4, h5, h6 {
+  opacity: 0.8;
+  color: #000000;
 }
 
 * {
     border-color: #00FFBB;
+}
+
+.navigation-bar > :first-child, .navigation-bar > :first-child > :first-child {
+  height: 3rem;
+  width: 3rem;
 }
 
 .padding {
@@ -58,6 +70,15 @@ svg {
     html {
         background-color: #222222;
         color: #ffffff;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        color: #00FFBB;
+    }
+
+    h2, h3, h4, h5, h6 {
+        color: #00FFBB;
+        opacity: 0.7;
     }
 
     .sections a {
