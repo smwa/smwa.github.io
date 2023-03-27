@@ -45,6 +45,12 @@ svg {
   stroke: #000000;
 }
 
+@media screen and (min-width: 45rem) {
+  .headshot {
+    border-radius: 5px;
+  }
+}
+
 @media (prefers-color-scheme: light) {
   .navigation-bar img {
   background-color: #222222;
