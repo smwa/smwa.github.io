@@ -14,6 +14,11 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    min-width: 100%;
+    min-height: 100%;
 
     background-image: radial-gradient(
         #062C06, #000000 120%
