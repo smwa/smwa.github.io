@@ -33,6 +33,31 @@
     <link rel="mask-icon" href="{{ site.data.site.apple_mask_icon | relative_url }}" color="{{ site.data.site.color }}">
     <link rel="apple-touch-icon" href="{{ site.data.site.logo | relative_url }}">
 
+    <style>
+      .sections > * {
+        transform: rotate3d(0,0,0,0deg) translateX(-100vw);
+        opacity: 0;
+      }
+      @media screen and (min-width: 45rem) {
+        .sections > * {
+          transition: opacity 1.0s ease-in;
+        }
+      }
+      @media screen and (max-width: 44.9999rem) {
+        .sections > * {
+          transition: transform 1.0s ease-out, opacity 0.8s ease-in;
+        }
+      }
+    </style>
+    <noscript>
+      <style>
+        .sections > * {
+          transform: unset;
+          opacity: 1.0;
+        }
+      </style>
+    </noscript>
+
   </head>
   <body>
     <div class="navigation-bar" role="heading">
@@ -55,6 +80,25 @@
           navigator.serviceWorker.register("{{ 'service-worker.js' | relative_url }}");
         }
       {% endif %}
+
+      let initialSlideIncounter = 0;
+      Array.from(document.querySelectorAll('.sections > *')).forEach((el, elIndex) => {
+        // Offscreen
+        const rect = el.getBoundingClientRect();
+        if (rect.y > window.innerHeight || (rect.y + rect.height) < 0) {
+          el.style.transition = 'unset';
+          el.style.transform = 'translateX(0)';
+          el.style.opacity = 1.0;
+        }
+        else {
+          // Onscreen
+          setTimeout(() => {
+            el.style.transform = 'translateX(0)';
+            el.style.opacity = 1.0;
+          }, 200 * (initialSlideIncounter));
+          initialSlideIncounter += 1;
+        };
+      });
     </script>
   </body>
 </html>
