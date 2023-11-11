@@ -7,8 +7,6 @@ previous_url: /Michael/
 
 <div class="poem-container">
 
-  {% assign poems = site.collections | where: "label", "poems" | first %}
-
   {% for poem in site.poems %}
     <div class="poem">
       {{ poem.content }}
