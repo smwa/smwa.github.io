@@ -1,4 +1,0 @@
----
-layout: poem
-title: Template
----

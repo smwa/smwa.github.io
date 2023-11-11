@@ -60,6 +60,10 @@ exclude:
   - Gemfile.lock
   - run.sh
 
+collections:
+  poems:
+    output: true
+
 defaults:
   - scope:
       path: "assets"

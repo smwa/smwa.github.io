@@ -1,0 +1,18 @@
+---
+layout: default_child
+title: Poetry
+previous_url: /Michael/
+---
+<h2>An Attempt At My Creative Side</h2>
+
+<div class="poem-container">
+
+  {% assign poems = site.collections | where: "label", "poems" | first %}
+
+  {% for poem in site.poems %}
+    <div class="poem">
+      {{ poem.content }}
+    </div>
+  {% endfor %}
+
+</div>

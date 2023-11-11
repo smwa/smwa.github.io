@@ -167,3 +167,15 @@ html {
 .gyro-transform {
     transition: transform 30ms;
 }
+
+.poem-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+
+.poem-container > * {
+  font-family: monospace;
+  white-space: pre;
+}
