@@ -8,9 +8,7 @@ previous_url: /Michael/
 <div class="poem-container">
 
   {% for poem in site.poems %}
-    <div class="poem">
-      {{ poem.content }}
-    </div>
+    <div class="poem">{{ poem.content | strip }}</div>
   {% endfor %}
 
 </div>
