@@ -62,7 +62,6 @@ exclude:
 
 collections:
   poems:
-    output: true
 
 defaults:
   - scope:
