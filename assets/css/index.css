@@ -177,5 +177,5 @@ html {
 
 .poem-container > * {
   font-family: monospace;
-  white-space: pre;
+  white-space: pre-wrap;
 }
