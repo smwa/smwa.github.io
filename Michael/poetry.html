@@ -8,7 +8,8 @@ previous_url: /Michael/
 <div class="poem-container">
 
   {% for poem in site.poems %}
-    <div class="poem">{{ poem.content | strip }}</div>
+    <div class="poem">{{ poem.output | strip }} - {{ poem.path | date_to_long_string: "ordinal", "US" }}
+    </div>
   {% endfor %}
 
 </div>

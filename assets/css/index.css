@@ -173,9 +173,12 @@ html {
   flex-direction: row;
   flex-wrap: wrap;
   gap: 4rem;
+  row-gap: 1.8rem;
 }
 
 .poem-container > * {
   font-family: monospace;
   white-space: pre-wrap;
+  min-width: 24rem;
+  max-width: 100%;
 }
