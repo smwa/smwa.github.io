@@ -60,6 +60,17 @@
   <body>
     <div class="console-background"></div>
     <div class="console gyro-transform" role="main">
+      <small>
+        <nav>
+            {% if page.previous_url %}
+              <a href="{{ page.previous_url }}">Go Back</a>
+            {% else %}
+              {% if layout.previous_url %}
+                <a href="{{ layout.previous_url }}">Go Back</a>
+              {% endif %}
+            {% endif %}
+        </nav>
+      </small>
       {{ content }}
     </div>
     <script src="{{ '/assets/js/gyro.js' | relative_url }}"></script>
