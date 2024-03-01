@@ -5,7 +5,36 @@ previous_url: /Michael/
 ---
 <h1>Blues in OKC</h1>
 
-<ul>
-  <li><a href="https://forms.gle/R7mzbzUszRLLsWeWA">Sign up for updates on new events!</a></li>
-  <li><a href="https://www.mixily.com/listing/3702886878552742982">See our events on Mixily</a></li>
-</ul>
+<form id="blues_subscriber_form" class="row_form">
+    <h3 style="width: 100vw">Stay up to date about new events, unsubscribe any time.</h3>
+    <input type="email" id="blues_subscriber_email" placeholder="Your Email Address" required="required">
+    <button type="submit">Keep In Touch</button>
+</form>
+
+<div id="blues_success_message"></div>
+
+<h3><a href="https://www.mixily.com/listing/3702886878552742982">See our upcoming events</a></h3>
+
+<script>
+
+const blues_form = document.getElementById('blues_subscriber_form');
+const blues_success_message = document.getElementById('blues_success_message');
+
+const on_blues_subscriber_submit = async (e) => {
+  e.preventDefault();
+  await fetch('https://home.mechstack.dev/api/webhook/mechstackBluesMailingList90812352', {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      "email": document.getElementById('blues_subscriber_email').value,
+    })
+  });
+
+  blues_form.innerHTML = '';
+  blues_success_message.innerHTML = "<h3>We will let you know about upcoming events!</h3>";
+};
+
+blues_form.addEventListener('submit', on_blues_subscriber_submit, true) ;
+</script>

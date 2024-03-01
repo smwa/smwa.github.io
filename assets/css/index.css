@@ -182,3 +182,35 @@ html {
   min-width: 24rem;
   max-width: 100%;
 }
+
+.row_form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+}
+
+.row_form input[type='email'] {
+  min-width: 50rem;
+  flex: 1;
+}
+
+input[type='email'] {
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+  display: block;
+  color: white;
+  border-bottom: 1px solid white;
+  padding: 0.25rem;
+  font-size: larger;
+}
+
+button {
+  border: none;
+  border-radius: 0;
+  background-color: white;
+  font-size: large;
+  padding: 1rem;
+}
