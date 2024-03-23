@@ -215,3 +215,7 @@ button {
   font-size: large;
   padding: 1rem;
 }
+
+.hide {
+  display: none;
+}
