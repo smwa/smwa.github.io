@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Michael Smith - Headphones</title>
+    <link rel="stylesheet" type="text/css" href="/assets/css/index.css">
+    <link rel="manifest" href="/manifest.json">
+
+    <meta name="description" content="A home page to get up-to-date information on Michael Smith, the software engineer from Oklahoma.">
+    <meta name="theme-color" content="#062C06">
+
+    <!-- Open Graph Meta -->
+    <meta content="Michael Smith" property="og:site_name">
+    <meta content="Michael Smith" property="og:title">
+    <meta content="website" property="og:type">
+    <meta content="A home page to get up-to-date information on Michael Smith, the software engineer from Oklahoma." property="og:description">
+    <meta content="https://mechstack.dev/" property="og:url">
+    <meta content="https://mechstack.dev/assets/icons/favicon.png" property="og:image">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@smwa_ok">
+    <meta name="twitter:creator" content="@smwa_ok">
+    <meta name="twitter:title" content="Michael Smith">
+    <meta name="twitter:url" content="https://mechstack.dev/">
+    <meta name="twitter:description" content="A home page to get up-to-date information on Michael Smith, the software engineer from Oklahoma.">
+    <meta name="twitter:image:src" content="https://mechstack.dev/assets/icons/favicon.png">
+
+    <link rel="icon" type="image/png" href="/assets/icons/favicon.png">
+    <link rel="mask-icon" href="/assets/icons/apple-mask-icon.svg" color="#062C06">
+    <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+    
+    <style>
+      .sections > * {
+        transform: rotate3d(0,0,0,0deg) translateX(-100vw);
+        opacity: 0;
+      }
+      @media screen and (min-width: 45rem) {
+        .sections > * {
+          transition: opacity 1.0s ease-in;
+        }
+      }
+      @media screen and (max-width: 44.9999rem) {
+        .sections > * {
+          transition: transform 1.0s ease-out, opacity 0.8s ease-in;
+        }
+      }
+    </style>
+    <noscript>
+      <style>
+        .sections > * {
+          transform: unset;
+          opacity: 1.0;
+        }
+      </style>
+    </noscript>
+
+  </head>
+  <body>
+    <div class="console-background"></div>
+    <div class="console gyro-transform" role="main">
+      <small>
+        <nav>
+            
+              
+                <a href="/Michael/blog.html">Go Back</a>
+              
+            
+        </nav>
+      </small>
+      <h1>Headphones</h1>
+
+<h3>February 16, 2017</h3>
+<div class="post">
+<p>I eventually went for a set of headphones, but I chose a cheaper pair in case they weren’t what I wanted. They’re by Senso (<a href="https://www.amazon.com/Bluetooth-Headphones-Waterproof-Sweatproof-Cancelling/dp/B01G8JO5F2/" target="_blank" rel="noopener noreferrer">Amazon</a>) for $40.</p>
+
+<p>They do a great job of juggling devices, they hook up to my laptop and phone without any complaints. Windows isn’t quite as good at bluetooth headphones as Android is sadly, maybe someday they’ll fix that. Until then, the headphones will play the audio of whichever device starts first. Decent battery, great sound, but they love to talk.</p>
+
+<p>Whenever they power on, off, connect or disconnect from a device, or get a low battery, it tells you with a voice. A loud voice. This is my only complaint about this set. I’ve had other devices that do this, and I wasn’t a fan of those either. Maybe it’s the volume, or maybe it’s the voice.</p>
+
+<p>It is odd that I hate this, because when I make an interface for a website, I hate using symbols without words. The search button, logout, or menu buttons must have text when I make them. There can be no doubt when the user looks at it, what it does.</p>
+</div>
+
+    </div>
+    <script src="/assets/js/gyro.js"></script>
+    <script>
+      
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register("/service-worker.js");
+        }
+      
+
+      let initialSlideIncounter = 0;
+      Array.from(document.querySelectorAll('.sections > *')).forEach((el, elIndex) => {
+        // Offscreen
+        const rect = el.getBoundingClientRect();
+        if (rect.y > window.innerHeight || (rect.y + rect.height) < 0) {
+          el.style.transition = 'unset';
+          el.style.transform = 'translateX(0)';
+          el.style.opacity = 1.0;
+        }
+        else {
+          // Onscreen
+          setTimeout(() => {
+            el.style.transform = 'translateX(0)';
+            el.style.opacity = 1.0;
+          }, 200 * (initialSlideIncounter));
+          initialSlideIncounter += 1;
+        };
+      });
+    </script>
+
+<!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//mat.mechstack.dev/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+    
+  </body>
+</html>

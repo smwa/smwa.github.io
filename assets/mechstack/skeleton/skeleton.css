@@ -1,0 +1,156 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
+
+svg {
+    width: 1.2em;
+    height: 1.2em;
+    padding: 0.4em;
+}
+
+.navigation-bar {
+    width: 100%;
+    overflow-x: auto;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.navigation-bar > *:first-child > * {
+    width: 2rem;
+}
+
+.navigation-bar > * {
+    height: 2rem;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.navigation-bar > * > * {
+    max-height: 100%;
+}
+
+.navigation-bar :visited, .navigation-bar :link {
+    color: initial;
+}
+
+.sections {
+    width: 100%;
+    display: flex;
+    column-gap: 2rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    flex-direction: column;
+}
+
+/* Section */
+.sections > * {
+    max-width: 67.5rem;
+    flex: 1;
+    /* min-height to add spacer when empty */
+    min-height: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (min-width: 45rem) {
+    .sections > * {
+        min-width: 45rem;
+    }
+}
+
+/* Block */
+.sections > * > * {
+    position: relative;
+    height: 22.5rem;
+    min-width: 22.5rem;
+    max-width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    object-fit: cover;
+}
+
+/* Content */
+.sections > * > * > img {
+    display: block;
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.sections > * > * > img + * {
+    z-index: 1;
+}
+
+.sections > * > * > img + *::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+@media (prefers-color-scheme: dark) {
+    .sections > * > * > img + *::after {
+        background-color: black;
+    }
+}
+
+.center-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 44.9999rem) {
+    .hide-on-mobile {
+        display: none !important;
+    }
+
+    .sections > * > * {
+        width: 100vw;
+    }
+}
+
+@media screen and (min-width: 45rem) {
+    .hide-on-desktop {
+        display: none !important;
+    }
+
+    .sections > * {
+        min-width: 45rem;
+    }
+}
+
+@media screen and (min-width: 71.5rem) {
+    .sections {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        width: calc(100% - 4rem);
+        flex-direction: row;
+    }
+}
