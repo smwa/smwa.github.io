@@ -1,0 +1,27 @@
+{
+  "short_name": "Michael Smith",
+  "name": "Michael Smith",
+  "icons": [
+    {
+      "src": "/assets/icons/themed-mask-icon.png",
+      "sizes": "192x192 256x256 512x512",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/assets/icons/apple-mask-icon.svg",
+      "sizes": "192x192 256x256 512x512",
+      "purpose": "monochrome"
+    },
+    {
+      "src": "/assets/icons/favicon.png",
+      "type": "image/png",
+      "sizes": "48x48 96x96 128x128 180x180 192x192 256x256"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#000000",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#062C06",
+  "description": "A home page to get up-to-date information on Michael Smith, the software engineer from Oklahoma."
+}
