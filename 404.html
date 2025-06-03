@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Michael Smith - </title>
+    <link rel="stylesheet" type="text/css" href="/assets/css/index.css">
+    <link rel="manifest" href="/manifest.json">
+
+    <meta name="description" content="A home page to get up-to-date information on Michael Smith, the software engineer from Oklahoma.">
+    <meta name="theme-color" content="#062C06">
+
+    <!-- Open Graph Meta -->
+    <meta content="Michael Smith" property="og:site_name">
+    <meta content="Michael Smith" property="og:title">
+    <meta content="website" property="og:type">
+    <meta content="A home page to get up-to-date information on Michael Smith, the software engineer from Oklahoma." property="og:description">
+    <meta content="https://mechstack.dev/" property="og:url">
+    <meta content="https://mechstack.dev/assets/icons/favicon.png" property="og:image">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@smwa_ok">
+    <meta name="twitter:creator" content="@smwa_ok">
+    <meta name="twitter:title" content="Michael Smith">
+    <meta name="twitter:url" content="https://mechstack.dev/">
+    <meta name="twitter:description" content="A home page to get up-to-date information on Michael Smith, the software engineer from Oklahoma.">
+    <meta name="twitter:image:src" content="https://mechstack.dev/assets/icons/favicon.png">
+
+    <link rel="icon" type="image/png" href="/assets/icons/favicon.png">
+    <link rel="mask-icon" href="/assets/icons/apple-mask-icon.svg" color="#062C06">
+    <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+    
+    <style>
+      .sections > * {
+        transform: rotate3d(0,0,0,0deg) translateX(-100vw);
+        opacity: 0;
+      }
+      @media screen and (min-width: 45rem) {
+        .sections > * {
+          transition: opacity 1.0s ease-in;
+        }
+      }
+      @media screen and (max-width: 44.9999rem) {
+        .sections > * {
+          transition: transform 1.0s ease-out, opacity 0.8s ease-in;
+        }
+      }
+    </style>
+    <noscript>
+      <style>
+        .sections > * {
+          transform: unset;
+          opacity: 1.0;
+        }
+      </style>
+    </noscript>
+
+  </head>
+  <body>
+    <div class="console-background"></div>
+    <div class="console gyro-transform" role="main">
+      <small>
+        <nav>
+            
+              
+            
+        </nav>
+      </small>
+      <style type="text/css" media="screen">
+  .container {
+    margin: 10px auto;
+    max-width: 600px;
+    text-align: center;
+  }
+  h1 {
+    margin: 30px 0;
+    font-size: 4em;
+    line-height: 1;
+    letter-spacing: -1px;
+  }
+</style>
+
+<div class="container">
+  <h1>404</h1>
+
+  <p><strong>Page not found :(</strong></p>
+  <p>The requested page could not be found.</p>
+</div>
+
+    </div>
+    <script src="/assets/js/gyro.js"></script>
+    <script>
+      
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register("/service-worker.js");
+        }
+      
+
+      let initialSlideIncounter = 0;
+      Array.from(document.querySelectorAll('.sections > *')).forEach((el, elIndex) => {
+        // Offscreen
+        const rect = el.getBoundingClientRect();
+        if (rect.y > window.innerHeight || (rect.y + rect.height) < 0) {
+          el.style.transition = 'unset';
+          el.style.transform = 'translateX(0)';
+          el.style.opacity = 1.0;
+        }
+        else {
+          // Onscreen
+          setTimeout(() => {
+            el.style.transform = 'translateX(0)';
+            el.style.opacity = 1.0;
+          }, 200 * (initialSlideIncounter));
+          initialSlideIncounter += 1;
+        };
+      });
+    </script>
+
+<!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//mat.mechstack.dev/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+    
+  </body>
+</html>

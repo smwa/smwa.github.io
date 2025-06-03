@@ -1,0 +1,221 @@
+.console a {
+    cursor: pointer;
+    text-decoration: underline;
+    color: inherit;
+}
+
+.console a:hover {
+    color: #ccccff;
+}
+
+.console-background {
+    background-color: #000000;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    min-width: 100%;
+    min-height: 100%;
+
+    background-image: radial-gradient(
+        #062C06, #000000 120%
+    );
+}
+
+.console code {
+  white-space: pre;
+  font-style: italic;
+  color: #eeeeee;
+}
+
+.console * {
+    transition-duration: 100ms;
+    transition-property: color, text-shadow;
+}
+
+.console {
+    text-shadow: 0 0 3px #aaaaaa;
+    font: 1.3rem Inconsolata, monospace;
+    color: #bbbbbb;
+    word-wrap: break-word;
+    /* word-break: break-all; */
+    letter-spacing: 0.03em;
+    line-height: 1.45em;
+}
+
+.console h1 {
+  font-weight: 500;
+  color: #ffffff;
+  text-shadow: 0 0 3px #eee;
+  text-decoration: underline;
+}
+
+.console h2 {
+  font-weight: 500;
+  color: #ffffff;
+  text-shadow: 0 0 3px #eee;
+  text-decoration: underline;
+}
+
+.console h3 {
+  font-weight: 500;
+  color: #eeeeee;
+  text-shadow: 0 0 3px #ccc;
+}
+
+.console h4 {
+  font-weight: 500;
+  color: #eeeeee;
+  text-shadow: 0 0 3px #ccc;
+}
+
+.console h5 {
+  font-weight: 500;
+  color: #dddddd;
+  text-shadow: 0 0 3px #bbb;
+}
+
+.console h6 {
+  font-weight: 500;
+  color: #dddddd;
+  text-shadow: 0 0 3px #bbb;
+}
+
+.console-input {
+    background-color: #000000;
+    border: 0;
+    width: 0.0001vw;
+    height: 0.0001vh;
+    resize: none;
+    opacity: 0;
+}
+
+.console::after {
+    content: "|";
+    animation: blinker 1.4s linear infinite;
+    margin-left: -0.15em;
+    font-weight: bold;
+}
+
+.console ::selection {
+    background-color: #dddddd;
+    color: #000000;
+    text-shadow: 0 0 3px #373737;
+}
+
+.console ul {
+  list-style-type: none;
+}
+
+.console ul > li::before {
+  content: '>';
+  padding-right: 0.5rem;
+}
+
+@keyframes blinker {
+    0% {
+        visibility: hidden;
+    }
+    50% {
+        visibility: hidden;
+    }
+    100% {
+        visibility: visible;
+    }
+}
+
+.contact {
+    padding-bottom: 1.8rem;
+    display: flex;
+    align-items: center;
+    word-break: break-all;
+}
+
+.contact small {
+  font-size: 1.7rem;
+  padding-right: 0.6rem;
+  margin-left: -0.2rem;
+}
+
+.contact :first-child:not(small) {
+    height: auto;
+    width: 1.4em;
+    padding-right: 0.8rem;
+}
+
+body {
+    margin: 0;
+    padding-left: 4vw;
+    padding-right: 4vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    min-height: 96vh;
+}
+
+html {
+    background-color: #000000;
+}
+
+.post img {
+    max-width: 100%;
+    max-height: 85vh;
+}
+
+.gyro-transform {
+    transition: transform 30ms;
+}
+
+.poem-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 4rem;
+  row-gap: 1.8rem;
+}
+
+.poem-container > * {
+  font-family: monospace;
+  white-space: pre-wrap;
+  min-width: 24rem;
+  max-width: 100%;
+}
+
+.row_form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+}
+
+.row_form input[type='email'] {
+  min-width: 50rem;
+  flex: 1;
+}
+
+input[type='email'] {
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+  color: white;
+  display: block;
+  border-bottom: 1px solid white;
+  padding: 0.25rem;
+  font-size: larger;
+}
+
+button {
+  border: none;
+  border-radius: 0;
+  background-color: white;
+  color: black;
+  font-size: large;
+  padding: 1rem;
+}
+
+.hide {
+  display: none;
+}

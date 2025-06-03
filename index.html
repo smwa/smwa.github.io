@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/assets/mechstack/skeleton/skeleton.css">
+    <link rel="stylesheet" href="/assets/mechstack/custom.css">
+    <link rel="manifest" href="/manifest.json">
+
+    <title>Mechstack</title>
+    <meta name="description" content="Landing page for Mechstack, an LLC in Oklahoma created by Michael Smith.">
+    <meta name="theme-color" content="#062C06">
+
+    <!-- Open Graph Meta -->
+    <meta content="Mechstack" property="og:site_name">
+    <meta content="Mechstack" property="og:title">
+    <meta content="website" property="og:type">
+    <meta content="Landing page for Mechstack, an LLC in Oklahoma created by Michael Smith." property="og:description">
+    <meta content="https://mechstack.dev/" property="og:url">
+    <meta content="https://mechstack.dev/assets/mechstack/Michael.jpg" property="og:image">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="">
+    <meta name="twitter:creator" content="">
+    <meta name="twitter:title" content="Mechstack">
+    <meta name="twitter:url" content="https://mechstack.dev/">
+    <meta name="twitter:description" content="Landing page for Mechstack, an LLC in Oklahoma created by Michael Smith.">
+    <meta name="twitter:image:src" content="https://mechstack.dev/assets/mechstack/Michael.jpg">
+
+    <link rel="icon" type="image/png" href="/assets/icons/favicon.png">
+    <link rel="mask-icon" href="/assets/icons/apple-mask-icon.svg" color="#062C06">
+    <link rel="apple-touch-icon" href="/assets/icons/favicon.png">
+
+    <style>
+      .sections > * {
+        transform: rotate3d(0,0,0,0deg) translateX(-100vw);
+        opacity: 0;
+      }
+      @media screen and (min-width: 45rem) {
+        .sections > * {
+          transition: opacity 1.0s ease-in;
+        }
+      }
+      @media screen and (max-width: 44.9999rem) {
+        .sections > * {
+          transition: transform 1.0s ease-out, opacity 0.8s ease-in;
+        }
+      }
+    </style>
+    <noscript>
+      <style>
+        .sections > * {
+          transform: unset;
+          opacity: 1.0;
+        }
+      </style>
+    </noscript>
+
+  </head>
+  <body>
+    <div class="navigation-bar" role="heading">
+      <a href="/">
+        
+<img src="/assets/icons/favicon.png" class="" srcset="/assets/icons/favicon.webp, /assets/icons/favicon.png" alt="Site logo">
+
+      </a>
+      
+      <img src="/assets/icons/favicon.png" style="width: 1em; opacity: 0%" title="Site generated at 2025-06-03 13:37:01 +0000" aria-hidden="true"> </div>
+    
+    <div class="sections" role="main">
+      <div>
+  <div>
+    <h1>Mechstack</h1>
+    <h2>Creating technology solutions for you</h2>
+  </div>
+</div>
+
+<div>
+    <div>
+        
+<img src="/assets/mechstack/Michael.jpg" class="headshot" srcset="/assets/mechstack/Michael.webp, /assets/mechstack/Michael.jpg" alt="Michael Smith">
+
+    </div>
+    <div class="padding">
+        <a href="https://calendar.app.google/XdLCCQDtGfuNSXgh9" class="center-content" target="_blank" rel="noopener noreferrer">
+            <i data-feather="calendar"></i>
+            Schedule a free consulation
+        </a>
+        <a href="mailto:info@mechstack.dev" class="center-content">
+            <i data-feather="mail"></i>
+            info@mechstack.dev
+        </a>
+        <a href="https://www.linkedin.com/in/michael-smith-ok" class="center-content" target="_blank" rel="noopener noreferrer">
+            <i data-feather="globe"></i>
+            LinkedIn: michael-smith-ok
+        </a>
+        <a href="https://github.com/smwa/" class="center-content" target="_blank" rel="noopener noreferrer">
+            <i data-feather="github"></i>
+            Github: smwa
+        </a>
+        <a href="/Michael/" class="center-content">
+            <i data-feather="globe"></i>
+            About Michael Smith
+        </a>
+    </div>
+</div>
+
+    </div>
+    <script src="/assets/mechstack/feather.min.js"></script>
+    <script>
+      feather.replace();
+      
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register("/service-worker.js");
+        }
+      
+
+      let initialSlideIncounter = 0;
+      Array.from(document.querySelectorAll('.sections > *')).forEach((el, elIndex) => {
+        // Offscreen
+        const rect = el.getBoundingClientRect();
+        if (rect.y > window.innerHeight || (rect.y + rect.height) < 0) {
+          el.style.transition = 'unset';
+          el.style.transform = 'translateX(0)';
+          el.style.opacity = 1.0;
+        }
+        else {
+          // Onscreen
+          setTimeout(() => {
+            el.style.transform = 'translateX(0)';
+            el.style.opacity = 1.0;
+          }, 200 * (initialSlideIncounter));
+          initialSlideIncounter += 1;
+        };
+      });
+    </script>
+
+<!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//mat.mechstack.dev/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+
+  </body>
+</html>
