@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="manifest" href="/manifest.json">
+
+    <title>Mechstack</title>
+    <meta name="description" content="Landing page for Mechstack, an LLC in Oklahoma created by Michael Smith.">
+    <meta name="theme-color" content="#062C06">
+
+    <!-- Open Graph Meta -->
+    <meta content="Mechstack" property="og:site_name">
+    <meta content="Mechstack" property="og:title">
+    <meta content="website" property="og:type">
+    <meta content="Landing page for Mechstack, an LLC in Oklahoma created by Michael Smith." property="og:description">
+    <meta content="https://mechstack.dev/" property="og:url">
+    <meta content="https://mechstack.dev/assets/mechstack/Michael.jpg" property="og:image">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="">
+    <meta name="twitter:creator" content="">
+    <meta name="twitter:title" content="Mechstack">
+    <meta name="twitter:url" content="https://mechstack.dev/">
+    <meta name="twitter:description" content="Landing page for Mechstack, an LLC in Oklahoma created by Michael Smith.">
+    <meta name="twitter:image:src" content="https://mechstack.dev/assets/mechstack/Michael.jpg">
+
+    <link rel="icon" type="image/png" href="/assets/icons/favicon.png">
+    <link rel="mask-icon" href="/assets/icons/apple-mask-icon.svg" color="#062C06">
+    <link rel="apple-touch-icon" href="/assets/icons/favicon.png">
+
+  </head>
+  <body>
+    <div class="sections" role="main">
+      <style>
+    :root {
+        --bg-base: #0a0a0a;
+        --bg-surface: #121212;
+        --text-primary: #f0f0f0;
+        --text-secondary: #a0a0a0;
+        --green-dark: #0f3814;
+        --green-medium: #1b5e20;
+        --green-light: #4caf50;
+        --green-highlight: #81c784;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        color: var(--text-primary);
+        background-color: var(--bg-base);
+        line-height: 1.6;
+    }
+
+    /* Typography */
+    h1, h2, h3 {
+        color: var(--text-primary);
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+        line-height: 1.2;
+    }
+
+    h2 {
+        font-size: 2.2rem;
+        border-bottom: 2px solid var(--green-dark);
+        padding-bottom: 0.5rem;
+        display: inline-block;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        color: var(--green-highlight);
+    }
+
+    p {
+        color: var(--text-secondary);
+        margin-bottom: 1.5rem;
+        font-size: 1.1rem;
+    }
+
+    a {
+        color: var(--green-light);
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    a:hover {
+        color: var(--green-highlight);
+    }
+
+    /* Layout */
+    .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+
+    section {
+        padding: 6rem 0;
+    }
+
+    /* Header & Navigation */
+    header {
+        background-color: rgba(10, 10, 10, 0.95);
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 100;
+        border-bottom: 1px solid var(--green-dark);
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 70px;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: var(--text-primary);
+        letter-spacing: 1px;
+    }
+
+    .logo span {
+        color: var(--green-light);
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .nav-links a {
+        color: var(--text-primary);
+        font-weight: 500;
+        font-size: 1rem;
+    }
+
+    .nav-links a:hover {
+        color: var(--green-light);
+    }
+
+    /* Hero Section */
+    #hero {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        padding-top: 70px; /* Offset for fixed header */
+        background: linear-gradient(135deg, var(--bg-base) 0%, var(--green-dark) 200%);
+    }
+
+    .hero-content {
+        max-width: 600px;
+    }
+
+    .btn {
+        display: inline-block;
+        background-color: var(--green-medium);
+        color: var(--text-primary);
+        padding: 0.8rem 2rem;
+        border-radius: 4px;
+        font-weight: 600;
+        border: 1px solid var(--green-light);
+        transition: all 0.3s ease;
+        margin-top: 1rem;
+    }
+
+    .btn:hover {
+        background-color: var(--green-light);
+        color: var(--bg-base);
+        border-color: var(--green-highlight);
+    }
+
+    /* Services Section */
+    #services {
+        background-color: var(--bg-surface);
+    }
+
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+
+    .service-card {
+        background-color: var(--bg-base);
+        padding: 2rem;
+        border-radius: 8px;
+        border: 1px solid var(--green-dark);
+        transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .service-card:hover {
+        transform: translateY(-5px);
+        border-color: var(--green-medium);
+    }
+
+    /* About Section */
+    .about-content {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+
+    .about-text p {
+        max-width: 800px;
+    }
+
+    /* Contact Section */
+    #contact {
+        background-color: var(--bg-surface);
+        border-top: 1px solid var(--green-dark);
+        border-bottom: 1px solid var(--green-dark);
+    }
+
+    .contact-methods {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-top: 3rem;
+    }
+
+    .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        font-size: 1.2rem;
+    }
+
+    .contact-label {
+        font-weight: 600;
+        color: var(--text-primary);
+        min-width: 100px;
+    }
+
+    /* Footer */
+    footer {
+        text-align: center;
+        padding: 2rem;
+        color: var(--text-secondary);
+        font-size: 0.9rem;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 2.2rem;
+        }
+        .nav-links {
+            display: none; /* Keep it simple without JS toggle for this iteration */
+        }
+        .nav-links.active {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 70px;
+            left: 0;
+            width: 100%;
+            background-color: var(--bg-surface);
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--green-dark);
+        }
+        .mobile-menu-btn {
+            display: block;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+    }
+
+    @media (min-width: 769px) {
+        .mobile-menu-btn {
+            display: none;
+        }
+    }
+</style>
+
+<header>
+    <div class="container">
+        <nav>
+            <div class="logo">Mech<span>stack</span>
+</div>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">☰</button>
+            <div class="nav-links" id="nav-links">
+                <a href="#services">Services</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section id="hero">
+        <div class="container hero-content">
+            <h1>Creating technology solutions for you.</h1>
+            <p>Custom software, robust infrastructure, and practical tech consulting designed to solve real problems for your business. No jargon, just results.</p>
+            <a href="https://calendar.app.google/XdLCCQDtGfuNSXgh9" class="btn" target="_blank" rel="noopener noreferrer">Schedule a Free Consultation</a>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <h2>How I Can Help</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Custom Development</h3>
+                    <p>From lightweight web applications to internal business tools, I build tailored software that maps perfectly to your operational workflows.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Systems Integration</h3>
+                    <p>Stop doing manual data entry. I connect your existing software tools so they talk to each other securely, saving you time and reducing human error.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Technical Consulting</h3>
+                    <p>Need advice on infrastructure, cloud hosting, or modernizing legacy code? I provide clear, actionable blueprints to scale your technology.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Mechstack</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Hi, I'm Michael Smith, the developer behind Mechstack.</p>
+                    <p>Technology should empower your business, not overcomplicate it. I started Mechstack to provide a more relatable, transparent approach to software engineering. When you work with Mechstack, you're working directly with the engineer building your product.</p>
+                    <p>Whether you need to automate a tedious process, build a customer-facing portal, or rescue a struggling codebase, I focus on delivering clean, maintainable, and pragmatic solutions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Let's Talk</h2>
+            <p>Ready to discuss your project? Reach out directly via email or connect with me on professional networks.</p>
+            
+            <div class="contact-methods">
+                <div class="contact-item">
+                    <span class="contact-label">Email:</span>
+                    <a href="mailto:info@mechstack.dev">info@mechstack.dev</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-label">LinkedIn:</span>
+                    <a href="https://linkedin.com/in/michael-smith-ok" target="_blank" rel="noopener noreferrer noopener noreferrer">michael-smith-ok</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-label">GitHub:</span>
+                    <a href="https://github.com/smwa" target="_blank" rel="noopener noreferrer noopener noreferrer">github.com/smwa</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-label">More:</span>
+                    <a href="./Michael" rel="noopener noreferrer">About Michael</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>© 2026 Mechstack. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    // Minimal JavaScript strictly for mobile menu toggling
+    document.addEventListener('DOMContentLoaded', () => {
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const navLinks = document.getElementById('nav-links');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when a link is clicked
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    navLinks.classList.remove('active');
+                }
+            });
+        });
+    });
+</script>
+
+    </div>
+    <script src="/assets/mechstack/feather.min.js"></script>
+    <script>
+      feather.replace();
+    </script>
+
+<!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//mat.mechstack.dev/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+
+  </body>
+</html>
