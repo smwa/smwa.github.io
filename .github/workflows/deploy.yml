@@ -40,7 +40,7 @@ jobs:
         # Vite needs `base: "/REPO/"`. We pass it through env so you don't
         # have to hard-code the repo name in vite.config.js.
         env:
-          VITE_BASE: /${{ github.event.repository.name }}/
+          VITE_BASE: /
         run: npm run build
 
       - name: Add SPA-safe 404 fallback
