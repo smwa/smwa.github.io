@@ -382,3 +382,73 @@
   .v1-portrait-frame { max-width: 280px; }
   .v1-contact-grid { grid-template-columns: 1fr 1fr; }
 }
+
+/* ---------- PRIVACY POLICY PAGE ---------- */
+.pp-main {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 56px 28px 80px;
+}
+.pp-inner { max-width: 72ch; }
+.pp-eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  color: var(--v1-mint);
+  margin-bottom: 12px;
+}
+.pp-h1 {
+  font-size: clamp(28px, 5vw, 48px);
+  font-weight: 700;
+  margin: 0 0 10px;
+  color: var(--v1-fg);
+  letter-spacing: -0.01em;
+}
+.pp-meta {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  color: var(--v1-fg-dim);
+  margin: 0 0 48px;
+}
+.pp-header {
+  border-bottom: 1px solid var(--v1-line);
+  padding-bottom: 32px;
+  margin-bottom: 40px;
+}
+.pp-section {
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px dashed var(--v1-line);
+}
+.pp-section:last-child { border-bottom: none; }
+.pp-section h2 {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--v1-mint);
+  margin: 0 0 14px;
+}
+.pp-section h3 {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--v1-amber);
+  margin: 20px 0 8px;
+}
+.pp-section p {
+  margin: 0 0 12px;
+  color: var(--v1-fg);
+  line-height: 1.7;
+  text-wrap: pretty;
+}
+.pp-section ul {
+  margin: 0 0 12px;
+  padding-left: 20px;
+  color: var(--v1-fg);
+  line-height: 1.7;
+}
+.pp-section li { margin-bottom: 6px; }
+.pp-section a { color: var(--v1-mint); text-decoration: underline; text-decoration-color: var(--v1-line-strong); }
+.pp-section a:hover { text-decoration-color: var(--v1-mint); }
+.pp-back { margin-top: 24px; }
+.pp-back a { color: var(--v1-fg-dim); letter-spacing: 0.12em; font-size: 12px; text-decoration: none; }
+.pp-back a:hover { color: var(--v1-mint); }

@@ -339,7 +339,11 @@ function Footer() {
       <div className="v1-footer-row">
         <span>{left}</span>
         <span>{middle}</span>
-        <span><a href={`mailto:${S.brand.email}`}>{S.brand.email}</a></span>
+        <span>
+          <a href="/privacy-policy">Privacy Policy</a>
+          {" · "}
+          <a href={`mailto:${S.brand.email}`}>{S.brand.email}</a>
+        </span>
       </div>
     </footer>
   );
