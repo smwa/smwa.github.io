@@ -19,7 +19,7 @@ machine-ish: labels, codes, the status panel readout. Don't set mono globally.
 ## Commands
 
 ```bash
-npm install     # once, Node 20+
+npm install     # once, Node 20+ (CI builds on 24)
 npm run dev     # http://localhost:5173, hot reload
 npm run build   # → dist/
 npm run preview # serve dist/ locally
