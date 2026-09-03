@@ -32,20 +32,18 @@ export const site = {
   /* ---------- Hero status panel ----------
      Tokens auto-fill from live data:
        "{LOCAL_TIME}"  → live clock (HH:MM:SS)
-       "{UPTIME}"      → days + clock since `uptimeStart`
   ----------------------------------------- */
   status: {
-    uptimeStart: "2021-01-01",
     rows: [
-      { label: "Operator",      value: "Michael Smith" },
-      { label: "Location",      value: "Oklahoma · CST" },
-      { label: "Local time",    value: "{LOCAL_TIME}", style: "mono" },
-      { label: "Uptime",        value: "{UPTIME}",     style: "mono dim" },
-      { label: "Engineers",     value: "1" },
-      { label: "Availability",  value: "Accepting work", led: "mint" },
-      { label: "Response",      value: "Same business day" },
+      { label: "Operator",       value: "Michael Smith" },
+      { label: "Location",       value: "Oklahoma · CST" },
+      { label: "Local time",     value: "{LOCAL_TIME}", style: "mono" },
+      { label: "Shipping since", value: "2014" },
+      { label: "Engineers",      value: "1" },
+      { label: "Availability",   value: "Accepting work", led: "mint" },
+      { label: "Response",       value: "Same business day" },
     ],
-    foot: "// 0 layers between you and the engineer",
+    foot: "0 layers between you and the engineer",
   },
 
   /* ---------- Services ---------- */
@@ -70,56 +68,48 @@ export const site = {
     },
   ],
 
-  /* ---------- Work / case files ----------
-     `diagram` picks which blueprint:
-       "wellsite" | "banking" | "cnc" | "inventory"
-  ----------------------------------------- */
-  work: [
+  /* ---------- Portfolio ---------- */
+  portfolio: [
     {
-      tag:     "INDUSTRIAL",
-      title:   "Edge PC for well-sites",
-      client:  "Flogistix",
-      year:    "2022",
+      tag:   "INDUSTRIAL",
+      title: "Edge PC for well-sites",
+      year:  "2022",
       note:
-        "Front-end on an industrial edge PC. React + AWS Greengrass + Docker Compose. " +
-        "Built to handle unreliable networks, sensors, and hardware across thousands of remote sites.",
-      diagram: "wellsite",
+        "Flogistix runs an industrial edge PC at each well-site. The hard part was never the " +
+        "interface — it was that the fleet grew to roughly 2,000 remote sites on flaky cellular " +
+        "and satellite links, maintained by a team small enough that nobody was going to drive " +
+        "out to fix one. I built the front-end into that: React on AWS Greengrass and Docker " +
+        "Compose, so a site pulls its own updates whenever it has a connection and keeps running " +
+        "when it doesn't. Adding a site meant provisioning it, not visiting it.",
     },
     {
-      tag:     "FINTECH",
-      title:   "Online banking platform",
-      client:  "Legacy Bank",
-      year:    "2023 — present",
+      tag:   "FINTECH",
+      title: "Online banking platform",
+      year:  "2023 — present",
       note:
-        "Backend engineer for a customer-facing web app: account management, documents, transfers. " +
-        "Plus an internal app giving loan officers up-to-date status on active loans.",
-      diagram: "banking",
+        "Legacy Bank's SaaS provider set a shutdown date for the platform running both its " +
+        "consumer and commercial online banking. That turned a replacement from a roadmap item " +
+        "into a hard deadline: accounts, documents, and transfers all had to be live before the " +
+        "old system went dark. I'm the backend engineer on the customer-facing web app, and " +
+        "built the internal app that gives loan officers live status on active loans. Seven " +
+        "months from start to cutover. We made the date.",
     },
     {
-      tag:     "CNC",
-      title:   "5-axis CNC laser mill",
-      client:  "Mechstack",
-      year:    "2022",
+      tag:   "MEDICAL",
+      title: "5-axis CNC laser mill",
+      year:  "2022",
       note:
-        "Worked with mechanical and electrical engineers on a special-purpose 5-axis laser mill. " +
-        "LinuxCNC, steppers, microcontrollers.",
-      diagram: "cnc",
-    },
-    {
-      tag:     "RETAIL",
-      title:   "Inventory management",
-      client:  "Mechstack",
-      year:    "2021",
-      note:    "Inventory tooling for a large-scale device retailer.",
-      diagram: "inventory",
+        "A special-purpose 5-axis laser mill for cutting custom-fit dental aligners — every part " +
+        "a different shape, so the machine had to hold accuracy across all five axes at once " +
+        "rather than repeat one motion well. Working alongside the mechanical and electrical " +
+        "engineers, I wrote the controller software on LinuxCNC and tuned the motors.",
     },
   ],
 
   /* ---------- About ---------- */
   about: {
-    sectionTitle: "One engineer.",
     portrait: {
-      image:   "/assets/headshot-placeholder.png",
+      image:   "/assets/michael-smith.png",
       alt:     "Michael Smith — operator, Mechstack",
       name:    "MICHAEL SMITH",
       role:    "Operator · Engineer · Oklahoma",
@@ -147,7 +137,6 @@ export const site = {
 
   /* ---------- Contact cards ---------- */
   contact: {
-    sectionTitle: "Get in touch.",
     cards: [
       { kind: "calendar", title: "Book a call", body: "30 minutes. No prep needed.", primary: true,  cta: "→ Calendar" },
       { kind: "email",    title: "Email",       body: null, primary: true,  cta: "→ Compose"  },
@@ -158,23 +147,23 @@ export const site = {
 
   /* ---------- Section headers ---------- */
   sections: {
-    services: { num: "01", label: "SERVICES", title: "What I do." },
-    about:    { num: "02", label: "ABOUT",    title: "One engineer." },
-    work:     { num: "03", label: "WORK",     title: "Things I've built." },
-    contact:  { num: "04", label: "CONTACT",  title: "Get in touch." },
+    services:  { num: "01", label: "SERVICES",  title: "What I do." },
+    about:     { num: "02", label: "ABOUT",     title: "One engineer." },
+    portfolio: { num: "03", label: "PORTFOLIO", title: "Things I've built." },
+    contact:   { num: "04", label: "CONTACT",   title: "Get in touch." },
   },
 
   /* ---------- Nav links ---------- */
   nav: [
-    { href: "#services", label: "SERVICES" },
-    { href: "#about",    label: "ABOUT" },
-    { href: "#work",     label: "WORK" },
-    { href: "#contact",  label: "CONTACT →", cta: true },
+    { href: "#services",  label: "SERVICES" },
+    { href: "#about",     label: "ABOUT" },
+    { href: "#portfolio", label: "PORTFOLIO" },
+    { href: "#contact",   label: "CONTACT →", cta: true },
   ],
 
   /* ---------- Footer ---------- */
   footer: {
     left:   "© {YEAR} Mechstack",
-    middle: "// Oklahoma",
+    middle: "Oklahoma",
   },
 };

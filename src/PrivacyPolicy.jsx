@@ -6,16 +6,16 @@ import { site as S } from "./site.js";
 
 function Nav() {
   return (
-    <nav className="v1-nav">
-      <a className="v1-nav-brand" href="/">
+    <nav className="ms-nav">
+      <a className="ms-nav-brand" href="/">
         <img src="/assets/mechstack-logo.png" alt="" />
         <span>{S.brand.name}</span>
       </a>
       <ul>
         <li><a href="/#services">SERVICES</a></li>
         <li><a href="/#about">ABOUT</a></li>
-        <li><a href="/#work">WORK</a></li>
-        <li><a href="/#contact" className="v1-nav-cta">CONTACT →</a></li>
+        <li><a href="/#portfolio">PORTFOLIO</a></li>
+        <li className="ms-nav-cta-item"><a href="/#contact" className="ms-nav-cta">CONTACT →</a></li>
       </ul>
     </nav>
   );
@@ -24,10 +24,10 @@ function Nav() {
 function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="v1-footer">
-      <div className="v1-footer-row">
-        <span>© {year} Mechstack</span>
-        <span>// Oklahoma</span>
+    <footer className="ms-footer">
+      <div className="ms-footer-row">
+        <span suppressHydrationWarning>© {year} Mechstack</span>
+        <span>Oklahoma</span>
         <span><a href={`mailto:${S.brand.email}`}>{S.brand.email}</a></span>
       </div>
     </footer>
@@ -37,15 +37,15 @@ function Footer() {
 export function PrivacyPolicy() {
   const year = new Date().getFullYear();
   return (
-    <div className="v1-root" id="top">
+    <div className="ms-root" id="top">
       <Nav />
       <main className="pp-main">
         <div className="pp-inner">
           <header className="pp-header">
-            <div className="pp-eyebrow">// Legal</div>
+            <div className="pp-eyebrow">Legal</div>
             <h1 className="pp-h1">Privacy Policy</h1>
             <p className="pp-meta">
-              Mechstack · mechstack.dev · Last updated: {year}
+              Mechstack · mechstack.dev · Last updated: <span suppressHydrationWarning>{year}</span>
             </p>
           </header>
 

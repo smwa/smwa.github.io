@@ -1,10 +1,14 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
+import { createRoot, hydrateRoot } from "react-dom/client";
 import { PrivacyPolicy } from "./PrivacyPolicy.jsx";
-import "./v1.css";
+import "./styles.css";
 
-ReactDOM.createRoot(document.getElementById("root")).render(
+const root = document.getElementById("root");
+const tree = (
   <React.StrictMode>
     <PrivacyPolicy />
   </React.StrictMode>
 );
+
+if (import.meta.env.DEV) createRoot(root).render(tree);
+else hydrateRoot(root, tree);
